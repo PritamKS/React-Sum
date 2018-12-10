@@ -10,14 +10,18 @@ class Main extends Component {
                 <Input name="num1"/>
                 <Input name="num2"/>
                 <ButtonAdd/>
-                {this.props.sum}
-            </div>
+                {this.props.temp1} + {this.props.temp2} =  {this.props.sum}
+             </div>
         );
     }
 }
 
 const mapStateToProps = (state) => {return{
-    sum: state.sum
+    sum: state.sum,
+    num1: state.num1,
+    num2: state.num2,
+    temp1: state.temp1,
+    temp2: state.temp2
 }}
 
 export default connect(mapStateToProps,null)(Main);
